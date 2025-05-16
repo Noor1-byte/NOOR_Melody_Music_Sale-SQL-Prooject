@@ -162,10 +162,6 @@ WHERE RowNo = 1;
 Write a query that returns the country along with the top customer and how much they spent. 
 For countries where the top amount spent is shared, provide all customers who spent this amount. */
 
-* Steps to Solve:  Similar to the above question. There are two parts in question- 
-first find the most spent on music for each country and second filter the data for respective customers. *
-
-
 
 WITH Customter_with_country AS (
 		SELECT customer.customer_id,first_name,last_name,billing_country,SUM(total) AS total_spending,
